@@ -13,6 +13,9 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
 import userRouter from './routes/user.routes'
+import commentRouter from './routes/comment.routes'
+import postRouter from './routes/post.routes'
 app.use('/api/v1/user', userRouter)
-
+app.use('/api/v1/comments', commentRouter)
+app.use('/api/v1/posts', postRouter)
 export default app

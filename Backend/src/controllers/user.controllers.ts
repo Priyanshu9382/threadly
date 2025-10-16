@@ -64,11 +64,11 @@ const loginUser = AsyncHandler(async (req, res) => {
         secure: true
     }
     return res
-        .status(201)
+        .status(200)
         .cookie("accessToken", accessToken, options)
         .cookie("refreshToken", loggedInUser.refreshToken, options)
         .json(
-            new ApiResponse(201, {
+            new ApiResponse(200, {
                 user,
                 accessToken
             }, "User loggedIn successfully!")
@@ -81,9 +81,9 @@ const getUser = AsyncHandler(async (req, res) => {
         throw new ApiError(500, "User not found")
     }
     return res
-        .status(201)
+        .status(200)
         .json(
-            new ApiResponse(201, user, "user fetched successfully!")
+            new ApiResponse(200, user, "user fetched successfully!")
         )
 })
 
@@ -104,11 +104,11 @@ const logoutUser = AsyncHandler(async (req, res) => {
         secure: true,
     }
     return res
-        .status(201)
+        .status(200)
         .clearCookie("accessToken", options)
         .clearCookie("refreshToken", options)
         .json(
-            new ApiResponse(201, {}, "User loggedOut successfully")
+            new ApiResponse(200, {}, "User loggedOut successfully")
         )
 })
 
