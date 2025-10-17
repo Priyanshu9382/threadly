@@ -11,7 +11,7 @@ const Landing = () => {
         });} */}
         <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
           <div className="title flex ">
-            <Link to={'/profile'}><img
+            <Link to={'/'}><img
               src= "https://i.pravatar.cc/150?img=1"
               alt="User avatar"
               className="h-10 w-10 rounded-full mr-4"
@@ -22,7 +22,7 @@ const Landing = () => {
         </div>
         <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
           <div className="title flex ">
-            <Link to={'/profile'}><img
+            <Link to={'/'}><img
               src= "https://i.pravatar.cc/150?img=1"
               alt="User avatar"
               className="h-10 w-10 rounded-full mr-4"
@@ -33,7 +33,7 @@ const Landing = () => {
         </div>
         <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
           <div className="title flex ">
-            <Link to={'/profile'}><img
+            <Link to={'/'}><img
               src= "https://i.pravatar.cc/150?img=1"
               alt="User avatar"
               className="h-10 w-10 rounded-full mr-4"
@@ -44,7 +44,7 @@ const Landing = () => {
         </div>
         <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
           <div className="title flex ">
-            <Link to={'/profile'}><img
+            <Link to={'/'}><img
               src= "https://i.pravatar.cc/150?img=1"
               alt="User avatar"
               className="h-10 w-10 rounded-full mr-4"
@@ -55,7 +55,7 @@ const Landing = () => {
         </div>
         <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
           <div className="title flex ">
-            <Link to={'/profile'}><img
+            <Link to={'/'}><img
               src= "https://i.pravatar.cc/150?img=1"
               alt="User avatar"
               className="h-10 w-10 rounded-full mr-4"

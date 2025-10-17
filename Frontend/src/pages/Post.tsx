@@ -23,7 +23,7 @@ const Post = () => {
         <div className="body p-4">
           <div className="post bg-[#333533] w-full  text-[#CFDBD5] mt-3 rounded-2xl shadow-2xl p-4">
             <div className="title flex">
-              <Link to={"/profile"}>
+              <Link to={"/"}>
                 <img
                   src= "https://i.pravatar.cc/150?img=1"
                   alt="User avatar"

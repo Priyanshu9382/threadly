@@ -9,12 +9,13 @@ export interface UserInfo {
 }
 
 
+
 export interface CommentType {
-  _id: number | string;
+  _id: string | number;
   postId: string | null;
   author: string;
   content: string;
-  parentId: string | number| null;
+  parentId: string | number | null;
   upvote: number;
   downvote: number;
   createdAt: string;
@@ -22,9 +23,10 @@ export interface CommentType {
 }
 
 export interface CommentContextType {
-  comments:CommentType[] | null
-  setComments: Dispatch<SetStateAction<CommentType[]>>
+  comments: CommentType[];
+  setComments: Dispatch<SetStateAction<CommentType[]>>;
 }
+
 
 export interface User {
   _id: string;

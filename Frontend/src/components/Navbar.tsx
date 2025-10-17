@@ -1,6 +1,6 @@
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+// import { FaBars } from "react-icons/fa";
 import { useAuth } from "../hooks/useAuth";
 import { FaUser } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
@@ -13,15 +13,15 @@ const Navbar = () => {
   return (
     <div className="bg-[#333533] flex justify-between items-center">
       <div className="logo flex items-center gap-3 ml-2">
-        <div className="sm:hidden cursor-pointer">
+        {/* <div className="sm:hidden cursor-pointer">
           <FaBars color="#CFDBD5" size={25} />
-        </div>
+        </div> */}
         <Link to={"/"}>
           <img src={logo} alt="Logo" className="h-15" />
         </Link>
       </div>
       {userInfo?._id?(
-        <Link to={"/profile"}>
+        <Link to={"/"}>
         {userInfo.avatar?(
           <img
           src={userInfo.avatar}
