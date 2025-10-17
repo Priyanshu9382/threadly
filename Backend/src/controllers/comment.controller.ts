@@ -104,4 +104,24 @@ const deleteComment = AsyncHandler(async (req, res) => {
         )
 })
 
+const upvoteComment = AsyncHandler(async(req,res)=>{
+    const commentId = req.params.id
+    if(!commentId){
+        throw new ApiError(400, "CommentId is required")
+    }
+    const comment = await Comment.findByIdAndUpdate(
+        commentId,
+        {
+            $inc:{
+                upvote: 1
+            }
+        }
+    )
+    return res
+    .status(200)
+    .json(
+        new ApiResponse(200, comment, "Upvoted successfully")
+    )
+})
+
 export { comment, getAllComments, editComment, deleteComment }
