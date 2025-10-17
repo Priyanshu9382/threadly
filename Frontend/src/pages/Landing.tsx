@@ -18,52 +18,11 @@ const Landing = () => {
             /></Link>
             <Link to={'/post'}><div className="heading text-2xl font-bold">What is a Title</div></Link>
           </div>
-          <div className="description pb-3 text-wrap mt-4"> This is the description of this Post. Title is the main heading of the post which is shown. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit nihil vero porro at sequi quo cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quisquam molestiae nihil excepturi. Eius in perspiciatis distinctio, reiciendis suscipit consequuntur excepturi quisquam eveniet culpa voluptatem eum quidem expedita odio deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum asperiores non labore animi, consectetur perspiciatis aperiam recusandae vel pariatur inventore ipsam explicabo porro, laudantium quia, quos id delectus itaque atque...</div>
+          <div className="description pb-3 text-wrap mt-4"> This is the description of this Post. Title is the main heading of the post which is shown. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit nihil vero porro at sequi quo cupiditate Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque pariatur incidunt error soluta unde molestiae, eum sequi aperiam esse. Deserunt esse fugit nesciunt, magni perferendis doloribus repellendus laborum ut repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestias, itaque non in expedita blanditiis impedit deserunt molestiae dolore animi, totam assumenda ab explicabo eaque dolorum. Ad mollitia fuga rem...</div>
         </div>
-        <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
-          <div className="title flex ">
-            <Link to={'/'}><img
-              src= "https://i.pravatar.cc/150?img=1"
-              alt="User avatar"
-              className="h-10 w-10 rounded-full mr-4"
-            /></Link>
-            <Link to={'/post'}><div className="heading text-2xl font-bold">What is a Title</div></Link>
-          </div>
-          <div className="description pb-3 text-wrap mt-4"> This is the description of this Post. Title is the main heading of the post which is shown. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit nihil vero porro at sequi quo cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quisquam molestiae nihil excepturi. Eius in perspiciatis distinctio, reiciendis suscipit consequuntur excepturi quisquam eveniet culpa voluptatem eum quidem expedita odio deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum asperiores non labore animi, consectetur perspiciatis aperiam recusandae vel pariatur inventore ipsam explicabo porro, laudantium quia, quos id delectus itaque atque...</div>
-        </div>
-        <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
-          <div className="title flex ">
-            <Link to={'/'}><img
-              src= "https://i.pravatar.cc/150?img=1"
-              alt="User avatar"
-              className="h-10 w-10 rounded-full mr-4"
-            /></Link>
-            <Link to={'/post'}><div className="heading text-2xl font-bold">What is a Title</div></Link>
-          </div>
-          <div className="description pb-3 text-wrap mt-4"> This is the description of this Post. Title is the main heading of the post which is shown. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit nihil vero porro at sequi quo cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quisquam molestiae nihil excepturi. Eius in perspiciatis distinctio, reiciendis suscipit consequuntur excepturi quisquam eveniet culpa voluptatem eum quidem expedita odio deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum asperiores non labore animi, consectetur perspiciatis aperiam recusandae vel pariatur inventore ipsam explicabo porro, laudantium quia, quos id delectus itaque atque...</div>
-        </div>
-        <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
-          <div className="title flex ">
-            <Link to={'/'}><img
-              src= "https://i.pravatar.cc/150?img=1"
-              alt="User avatar"
-              className="h-10 w-10 rounded-full mr-4"
-            /></Link>
-            <Link to={'/post'}><div className="heading text-2xl font-bold">What is a Title</div></Link>
-          </div>
-          <div className="description pb-3 text-wrap mt-4"> This is the description of this Post. Title is the main heading of the post which is shown. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit nihil vero porro at sequi quo cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quisquam molestiae nihil excepturi. Eius in perspiciatis distinctio, reiciendis suscipit consequuntur excepturi quisquam eveniet culpa voluptatem eum quidem expedita odio deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum asperiores non labore animi, consectetur perspiciatis aperiam recusandae vel pariatur inventore ipsam explicabo porro, laudantium quia, quos id delectus itaque atque...</div>
-        </div>
-        <div className="post bg-[#333533] w-full h-[25vh] overflow-hidden text-white mt-3 rounded-2xl shadow-2xl p-4">
-          <div className="title flex ">
-            <Link to={'/'}><img
-              src= "https://i.pravatar.cc/150?img=1"
-              alt="User avatar"
-              className="h-10 w-10 rounded-full mr-4"
-            /></Link>
-            <Link to={'/post'}><div className="heading text-2xl font-bold">What is a Title</div></Link>
-          </div>
-          <div className="description pb-3 text-wrap mt-4"> This is the description of this Post. Title is the main heading of the post which is shown. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit nihil vero porro at sequi quo cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quisquam molestiae nihil excepturi. Eius in perspiciatis distinctio, reiciendis suscipit consequuntur excepturi quisquam eveniet culpa voluptatem eum quidem expedita odio deserunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum asperiores non labore animi, consectetur perspiciatis aperiam recusandae vel pariatur inventore ipsam explicabo porro, laudantium quia, quos id delectus itaque atque...</div>
-        </div>
+        
+        
+        
       </div>
     </div>
   );
