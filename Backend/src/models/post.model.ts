@@ -24,7 +24,7 @@ const PostSchema = new mongoose.Schema<IPost>({
         required: true,
     },
     comments:[{
-        type:  mongoose.Schema.Types.ObjectId,
+        type:  Number,
         ref: 'Comment',
     }],
 },{timestamps: true})

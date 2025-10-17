@@ -33,11 +33,11 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center h-screen w-full ">
-      <div className="loginForm h-[70vh] w-md shadow-2xl rounded-4xl flex flex-col gap-5">
+      <div className="bg-[#333533] loginForm h-[70vh] w-md shadow-2xl rounded-4xl flex flex-col gap-5">
         <form action="" className="w-full p-10 flex flex-col gap-5" onSubmit={handleSubmit}>
-          <h1 className="text-center text-3xl font-bold">Login Page</h1>
+          <h1 className="text-center text-[#E8EDDF] text-3xl font-bold">Login Page</h1>
           <div className="flex flex-col gap-2">
-            <label htmlFor="" className="font-semibold pl-1 ">
+            <label htmlFor="" className="font-semibold text-[#E8EDDF] pl-1 ">
               Email
             </label>
             <input
@@ -51,7 +51,7 @@ const Login = () => {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="" className="font-semibold pl-1">
+            <label htmlFor="" className="font-semibold text-[#E8EDDF] pl-1">
               password
             </label>
             <input
@@ -68,7 +68,7 @@ const Login = () => {
             <button className="text-2xl text-white bg-black h-14 rounded-2xl mt-3 w-full" >
               Login
             </button>
-            <div className="text-sm text-center">New Here? <Link to={'/register'} className="underline">SignUp Here</Link></div>
+            <div className="text-sm text-center text-[#CFDBD5]">New Here? <Link to={'/register'} className="underline hover:text-[#F5CB5C]">SignUp Here</Link></div>
           </div>
         </form>
       </div>

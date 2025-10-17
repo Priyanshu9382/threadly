@@ -7,7 +7,7 @@ import Post from './pages/Post.tsx'
 
 function App() {
   return(
-    <div>
+    <div className='bg-[#242423]'>
       <Router>
         <Routes>
           <Route path='/' element={<Landing/>}/>

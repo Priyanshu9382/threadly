@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import logo from "../assets/logo.png";
 import { FaComments } from "react-icons/fa";
 // import commentsData from "../../Data/comments.json";
 import users from "../../Data/users.json";
@@ -19,14 +18,14 @@ const Post = () => {
 
   return (
     <CommentContextProvider>
-      <div>
+      <div className="min-h-screen">
         <Navbar />
         <div className="body p-4">
-          <div className="post w-full  text-black mt-3 rounded-2xl shadow-2xl p-4">
+          <div className="post bg-[#333533] w-full  text-[#CFDBD5] mt-3 rounded-2xl shadow-2xl p-4">
             <div className="title flex">
               <Link to={"/profile"}>
                 <img
-                  src={logo}
+                  src= "https://i.pravatar.cc/150?img=1"
                   alt="User avatar"
                   className="h-10 w-10 rounded-full mr-4"
                 />
@@ -61,7 +60,7 @@ const Post = () => {
 
             <div className="comments flex flex-col gap-2 justify-center">
               <div
-                className={`flex items-center gap-2 hover:underline text-gray-800 cursor-pointer`}
+                className={`flex items-center gap-2 hover:underline text-[#E8EDDF] cursor-pointer`}
                 onClick={() => setCommentVisible(!commentVisible)}
               >
                 <FaComments />{" "}
