@@ -106,10 +106,14 @@ const Comment: React.FC<CommentProps> = ({ comment, allComments, users, depth=0 
               >
                 <span
                   className={`${
-                    replyVisible ? "hidden" : ""
+                    replyVisible? "hidden" : ""
                   } text-gray-400 text-sm font-semibold `}
                 >
-                  View Replies
+                  {replies.length > 0 ? (
+                    <span>View Replies</span>
+                  ):(
+                    <span>No Replies</span>
+                  )}
                 </span>
               </div>
               <div className="text-gray-600 hover:underline cursor-pointer flex gap-2">
