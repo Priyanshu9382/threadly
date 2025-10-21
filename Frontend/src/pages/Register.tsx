@@ -2,8 +2,10 @@ import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import { CSpinner } from "@coreui/react";
 
 const Register = () => {
+  const [loading, setLoading] = useState(false)
   const {register, login} = useAuth()
   const [username, setUsername] = useState<string>("")
   const [email, setEmail] = useState("")
@@ -23,11 +25,14 @@ const Register = () => {
   }
   const handleSubmit = async(e:React.FormEvent)=>{
     e.preventDefault()
+    setLoading(true)
     try{
       await register(username,email,password)
       await login(email, password)
+      setLoading(false)
       navigate('/')
     }catch(error){
+      alert("Error in signing up User")
       if(error instanceof Error){
         throw new Error("Error in authenticating user "+error.message)
       }else{
@@ -84,7 +89,13 @@ const Register = () => {
           </div>
           <div className="h-full w-full ">
             <button className="text-2xl text-white bg-black h-14 rounded-2xl mt-3 w-full" >
-              Login
+              {loading ? (
+                <>
+                  <CSpinner className="dark" as={"span"} color="white" visuallyHiddenLabel="Signing Up..."/>
+                </>
+              ):(
+                "Sign Up"
+              )}
             </button>
             <div className="text-sm text-center text-[#CFDBD5]">Already an user? <Link to={'/login'} className="underline hover:text-[#F5CB5C]">Login Here</Link></div>
           </div>

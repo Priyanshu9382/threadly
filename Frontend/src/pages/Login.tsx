@@ -2,8 +2,10 @@ import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import {CSpinner} from '@coreui/react'
 
 const Login = () => {
+  const [loading, setLoading] = useState(false)
   const { login} = useAuth()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState('')
@@ -18,11 +20,14 @@ const Login = () => {
   }
   const handleSubmit = async(e:React.FormEvent)=>{
     e.preventDefault()
+    setLoading(true)
     try{
       console.log(email,password)
       await login(email, password)
+      setLoading(false)
       navigate('/')
     }catch(error){
+      alert("Error in User login")
       if(error instanceof Error){
         throw new Error("Error in authenticating user "+ error.message)
       }else{
@@ -66,7 +71,13 @@ const Login = () => {
           </div>
           <div className="h-full w-full ">
             <button className="text-2xl text-white bg-black h-14 rounded-2xl mt-3 w-full" >
-              Login
+              {loading ? (
+                <>
+                  <CSpinner className="dark" as={"span"} color="white" visuallyHiddenLabel="Loggin..."/>
+                </>
+              ):(
+                "Login"
+              )}
             </button>
             <div className="text-sm text-center text-[#CFDBD5]">New Here? <Link to={'/register'} className="underline hover:text-[#F5CB5C]">SignUp Here</Link></div>
           </div>

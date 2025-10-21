@@ -6,9 +6,17 @@ const Logout = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const logoutUser = async () => {
-        
-      logout();
-      navigate("/");
+      try {
+        logout();
+        navigate("/");
+      } catch (error) {
+        alert("Error in User logout");
+        if (error instanceof Error) {
+          throw new Error("Error in authenticating user " + error.message);
+        } else {
+          throw new Error("Unknown Error in authenticating user " + error);
+        }
+      }
     };
     logoutUser();
   }, [logout, navigate]);
