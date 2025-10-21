@@ -14,6 +14,7 @@ const Post = () => {
 
   if (!context) throw new Error("Must be used within CommentProvider");
 
+
   const { comments } = context;
 
   return (
@@ -79,6 +80,7 @@ const Post = () => {
                         comment={c}
                         allComments={comments}
                         users={users}
+                        depth = {0}
                       />
                     ))}
                 </div>

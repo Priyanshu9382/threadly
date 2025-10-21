@@ -9,9 +9,10 @@ interface CommentProps {
   comment: CommentType;
   allComments: CommentType[];
   users: User[];
+  depth?: number;
 }
 
-const Comment: React.FC<CommentProps> = ({ comment, allComments, users }) => {
+const Comment: React.FC<CommentProps> = ({ comment, allComments, users, depth=0 }) => {
   const { userInfo } = useAuth();
   const [isInputBoxVisible, setIsInputBoxVisible] = useState(false);
   const [input, setInput] = useState("");
@@ -68,7 +69,10 @@ const Comment: React.FC<CommentProps> = ({ comment, allComments, users }) => {
     setIsInputBoxVisible(false)
   };
   return (
-    <div className="mb-4">
+    <div className="relative pl-4 mb-4">
+      {replies.length > 0 && replyVisible &&(
+        <div className="absolute left-7 top-10 bottom-0 mb-4 w-[1px] bg-gray-600"></div>
+      )}
       <div className="user_detail flex items-center gap-8">
         <div className="flex items-center gap-2">
           <img
@@ -88,9 +92,12 @@ const Comment: React.FC<CommentProps> = ({ comment, allComments, users }) => {
         </div>
       </div>
       <div className="comment ml-10">{comment.content}</div>
+      
 
       {replies.length >= 0 && (
-        <div className="ml-10">
+        <div className="mt-2  relative sm:ml-10" style={{
+          marginLeft: window.innerWidth < 640 ? `10px` : undefined,
+        }}>
           <div className="flex flex-col gap-2 justify-center">
             <div className="flex gap-2 items-center">
               <div
@@ -147,6 +154,7 @@ const Comment: React.FC<CommentProps> = ({ comment, allComments, users }) => {
                   comment={reply}
                   allComments={allComments}
                   users={users}
+                  depth={depth + 1}
                 />
               ))}
             </div>
